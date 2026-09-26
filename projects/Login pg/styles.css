@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    position: relative;
+}
+
+#toggle {
+    display: none;
+}
+
+.login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgb(43, 199, 199);
+    background: #222;
+}
+
+.box {
+    width: 50%;
+    position: relative;
+    background: linear-gradient(135deg, rgb(43, 199, 199), #0a1169);
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+    overflow: hidden;
+}
+
+.box1 {
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.8s ease;
+}
+
+.login-text {
+    transform: translateX(0);
+}
+
+.signup-text {
+    transform: translateX(-100%);
+}
+
+#toggle:checked ~ .login .login-text {
+    transform: translateX(100%);
+}
+
+#toggle:checked ~ .login .signup-text {
+    transform: translateX(0);
+}
+
+.box1 h1 {
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.box1 p {
+    opacity: 0.9;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.forms {
+    width: 50%;
+    position: relative;
+    background: #222;
+    overflow: hidden;
+}
+
+.box2 {
+    position: absolute;
+    inset: 0;
+    padding: 40px 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Yeh text aur inputs ko vertically center kar dega */
+    transition: 0.8s ease;
+}
+
+.signup {
+    transform: translateX(100%);
+}
+
+#toggle:checked ~ .login .form {
+    transform: translateX(-100%);
+}
+
+#toggle:checked ~ .login .signup {
+    transform: translateX(0);
+}
+
+.box2 h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.box2 input {
+    width: 100%;
+    padding: 10px 0;
+    margin: 8px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(43, 199, 199);
+    color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+.box2 button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgb(43, 199, 199), #0a1169);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.box2 button:hover {
+    box-shadow: 0 0 20px rgb(43, 199, 199);
+    transform: scale(1.02);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+label span {
+    content: '';
+    color: rgb(43, 199, 199);
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .container {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .login {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box {
+        width: 100%;
+        height: 220px;
+        clip-path: none;
+    }
+
+    .box1 {
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .forms {
+        width: 100%;
+        height: 380px;
+    }
+
+    .box2 {
+        padding: 30px;
+    }
+}

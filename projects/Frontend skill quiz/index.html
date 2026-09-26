@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Skill Quiz & Result Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-card">
+    <div class="top-bar">
+      <div class="title">Frontend Skill Quiz</div>
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">Light Mode</button>
+    </div>
+
+    <div class="status-text" id="statusText">Question 1 of 15</div>
+
+    <div class="progress-bar-bg">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div id="quizContent">
+      <div class="question-text" id="questionText">Question loading...</div>
+      <div class="options-grid" id="optionsContainer" style="margin-top: 14px;"></div>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <div class="score-badge" id="scoreDisplay">Your Score: 0 / 15</div>
+      <div class="feedback-text" id="feedbackText">Great effort!</div>
+      <button class="restart-btn" onclick="resetQuiz()">Retake Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
