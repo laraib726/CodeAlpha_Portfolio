@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book's Hunter - Image Gallery </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">📚 Book's Hunter</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#bookGrid">Books</a></li>
+                <li><a href="#categories">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h1>Welcome to Our Visual Book Collection</h1>
+        <p>Discover a curated collection of classic novels, motivational books, dramas, and stories in high quality.</p>
+    </section>
+
+    <div class="gallery-container">
+        <h2 class="section-title">Books Gallery & Collection</h2>
+
+        <div class="filter-buttons" id="categories">
+            <button class="filter-btn active" onclick="filterBooks('all', event)">View All</button>
+            <button class="filter-btn" onclick="filterBooks('english', event)">English</button>
+            <button class="filter-btn" onclick="filterBooks('novels', event)">Novels</button>
+            <button class="filter-btn" onclick="filterBooks('motivational', event)">Motivational</button>
+            <button class="filter-btn" onclick="filterBooks('dramas', event)">Dramas</button>
+            <button class="filter-btn" onclick="filterBooks('stories', event)">Stories</button>
+        </div>
+
+        <div class="book-grid" id="bookGrid">
+            <div class="book-card" data-category="english" onclick="openLightbox(this)">
+                <img src="images/1984.jpg" alt="1984">
+                <h3>1984</h3>
+                <p>George Orwell</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="english" onclick="openLightbox(this)">
+                <img src="images/a tale of two cities.jpg" alt="A tale of two cities">
+                <h3>A Tale Of Two Cities</h3>
+                <p>Charles Dickens</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            
+            <div class="book-card" data-category="english" onclick="openLightbox(this)">
+                <img src="images/wuthering heights.jpg" alt="Wuthering Heights">
+                <h3>Wuthering Heights</h3>
+                <p>Emily Bronte</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="english" onclick="openLightbox(this)">
+                <img src="images/the old man and sea.jpg" alt="The Old Man and the Sea">
+                <h3>The Old Man and the Sea</h3>
+                <p>Ernest Hemingway</p>
+                <button class="view-btn">View Image</button>
+            </div>
+
+            <div class="book-card" data-category="novels" onclick="openLightbox(this)">
+                <img src="images/Peer-e-Kamil.jpg" alt="Peer-e-Kamil">
+                <h3>Peer-e-Kamil</h3>
+                <p>Umera Ahmed</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="novels" onclick="openLightbox(this)">
+                <img src="images/halim.jpg" alt="Halim">
+                <h3>Halim</h3>
+                <p>Nimra Ahmed</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="novels" onclick="openLightbox(this)">
+                <img src="images/kahaf.jpg" alt="kahaf">
+                <h3>Kahaf</h3>
+                <p>Abdullah Waseem</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="novels" onclick="openLightbox(this)">
+                <img src="images/Ishq-e-Atish.jpg" alt="ishq-e-aatish">
+                <h3>Ishq-e-Aatish</h3>
+                <p>Sadia Rajpoot</p>
+                <button class="view-btn">View Image</button>
+            </div>
+
+            <div class="book-card" data-category="motivational" onclick="openLightbox(this)">
+                <img src="images/atomic habits.jpg" alt="atomic habits">
+                <h3>Atomic Habits</h3>
+                <p>James Clear</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="motivational" onclick="openLightbox(this)">
+                <img src="images/think and grow rich.jpg" alt="think and grow rich">
+                <h3>Think and Grow Rich</h3>
+                <p>Napoleon Hill</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="motivational" onclick="openLightbox(this)">
+                <img src="images/Stop overthinking.jpg" alt="stop overthinking">
+                <h3>Stop Overthinking</h3>
+                <p>Nick Trenton</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="motivational" onclick="openLightbox(this)">
+                <img src="images/The Power of Positive Thinking.jpg" alt="The Power of Positive Thinking">
+                <h3>The Power of Positive Thinking</h3>
+                <p>Norman Vincent Peale</p>
+                <button class="view-btn">View Image</button>
+            </div> 
+
+            <div class="book-card" data-category="dramas" onclick="openLightbox(this)">
+                <img src="images/Hamlet.jpg" alt="Hamlet">
+                <h3>Hamlet</h3>
+                <p>William Shakespeare</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="dramas" onclick="openLightbox(this)">
+                <img src="images/Romeo and Juliet.jpg" alt="Romeo and Juliet">
+                <h3>Romeo and Juliet</h3>
+                <p>William Shakespeare</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="dramas" onclick="openLightbox(this)">
+                <img src="images/Macbeth.jpg" alt="Macbeth">
+                <h3>Macbeth</h3>
+                <p>William Shakespeare</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="dramas" onclick="openLightbox(this)">
+                <img src="images/Pygmalion.jpg" alt="Pygmalion">
+                <h3>Pygmalion</h3>
+                <p>George Bernard Shaw</p>
+                <button class="view-btn">View Image</button>
+            </div> 
+
+            <div class="book-card" data-category="stories" onclick="openLightbox(this)">
+                <img src="images/harry potter.jpg" alt="Harry Potter">
+                <h3>Harry Potter </h3>
+                <p>J.K. Rowling</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="stories" onclick="openLightbox(this)">
+                <img src="images/The Jungle Book.jpg" alt="The Jungle Book">
+                <h3>The Jungle Book</h3>
+                <p>Rudyard Kipling</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="stories" onclick="openLightbox(this)">
+                <img src="images/the little prince.jpg" alt="The little Prince">
+                <h3>The Little Prince</h3>
+                <p>Antoine de Saint-Exupery</p>
+                <button class="view-btn">View Image</button>
+            </div>
+            <div class="book-card" data-category="stories" onclick="openLightbox(this)">
+                <img src="images/The Wonderful Wizard of Oz.jpg" alt="The Wonderful Wizard of Oz">
+                <h3>The Wonderful Wizard of Oz</h3>
+                <p>L. Frank Baum</p>
+                <button class="view-btn">View Image</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-nav">
+            <button class="nav-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="nav-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Book's Hunter. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
